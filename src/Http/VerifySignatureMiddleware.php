@@ -23,11 +23,11 @@ class VerifySignatureMiddleware
             $verified = $webhook->verifySignature($req_signature);
         }
 
-        if (!$verified) {
+        if (! $verified) {
             return response()->json([
                 'error' => 1,
                 'message' => 'Invalid request signature.',
-                'data' => []
+                'data' => [],
             ], 403);
         }
 

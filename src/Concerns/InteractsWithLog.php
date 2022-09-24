@@ -1,13 +1,13 @@
 <?php
+
 namespace Tj\Ghwebhook\Concerns;
 
 use Illuminate\Support\Facades\Log;
 use Tj\Ghwebhook\LogType;
-use Tj\Ghwebhook\Webhook;
 
 trait InteractsWithLog
 {
-    public function log(LogType $type = LogType::INFO, string $message, array $context = [])
+    public function log(LogType $type, string $message, array $context = [])
     {
         $webhook = resolve(\Tj\Ghwebhook\Webhook::class);
         $channel = $webhook->payload->config['logging.channel'];

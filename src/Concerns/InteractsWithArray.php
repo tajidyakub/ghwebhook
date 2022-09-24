@@ -1,4 +1,5 @@
 <?php
+
 namespace Tj\Ghwebhook\Concerns;
 
 trait InteractsWithArray
@@ -14,6 +15,7 @@ trait InteractsWithArray
                 $arr[$prop->name] = $this->{$prop->name};
             }
         }
+
         return $arr;
     }
 }

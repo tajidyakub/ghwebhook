@@ -1,4 +1,5 @@
 <?php
+
 namespace Tj\Ghwebhook\Contracts;
 
 use Tj\Ghwebhook\Concerns\InteractsWithArray;
@@ -22,7 +23,7 @@ class ExceptionLog
             'code' => $exception->getCode(),
             'file' => $exception->getFile(),
             'line' => $exception->getLine(),
-            'trace' => $exception->getTrace()
+            'trace' => $exception->getTrace(),
         ];
 
         $this->log(LogType::ERROR, $this->message, $this->context);

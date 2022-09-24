@@ -1,4 +1,5 @@
 <?php
+
 namespace Tj\Ghwebhook\Contracts;
 
 use Tj\Ghwebhook\Concerns\InteractsWithLog;
@@ -11,7 +12,7 @@ class ActionLog
         InteractsWithLog,
         Initializeable;
 
-    public function __construct(public LogType $type = LogType::INFO, public string $message, public array $context = [])
+    public function __construct(public LogType $type, public string $message, public array $context = [])
     {
         $this->log($type, $message, $context);
     }

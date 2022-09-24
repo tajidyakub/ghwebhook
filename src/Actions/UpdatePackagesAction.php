@@ -1,4 +1,5 @@
 <?php
+
 namespace Tj\Ghwebhook\Actions;
 
 use Symfony\Component\Process\Process;
@@ -9,9 +10,10 @@ class UpdatePackagesAction extends ActionHandler implements ActionHandlerInterfa
 {
     public function handle(): mixed
     {
-        if (!$this->updatePackages()) {
+        if (! $this->updatePackages()) {
             return false;
         }
+
         return true;
     }
 

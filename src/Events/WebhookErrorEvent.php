@@ -1,4 +1,5 @@
 <?php
+
 namespace Tj\Ghwebhook\Events;
 
 use Illuminate\Broadcasting\InteractsWithSockets;

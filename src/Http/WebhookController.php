@@ -1,10 +1,11 @@
 <?php
+
 namespace Tj\Ghwebhook\Http;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller as BaseController;
 use Tj\Ghwebhook\Contracts\ExceptionLog;
 use Tj\Ghwebhook\Events\WebhookErrorEvent;
-use Illuminate\Routing\Controller as BaseController;
 
 class WebhookController extends BaseController
 {
@@ -21,7 +22,7 @@ class WebhookController extends BaseController
         return response()->json([
             'error' => 0,
             'message' => 'OK',
-            'data' => []
+            'data' => [],
         ]);
     }
 }

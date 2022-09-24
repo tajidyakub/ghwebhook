@@ -1,4 +1,5 @@
 <?php
+
 namespace Tj\Ghwebhook;
 
 enum LogType: string

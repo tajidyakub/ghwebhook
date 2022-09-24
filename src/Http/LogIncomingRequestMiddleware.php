@@ -25,12 +25,14 @@ class LogIncomingRequestMiddleware
         $context = [
             'event' => $request->header('X-GitHub-Event', null),
             'delivery' => $request->header('X-GitHub-Delivery', null),
-            'hook_id' =>  $request->header('X-GitHub-Hook-ID', null)
+            'hook_id' => $request->header('X-GitHub-Hook-ID', null),
         ];
 
-        if (!$webhook->payload->config['logging.exclude_body']) $context['req_body'] = $request->getContent();
+        if (! $webhook->payload->config['logging.exclude_body']) {
+            $context['req_body'] = $request->getContent();
+        }
 
-        $this->log(LogType::DEBUG, "Incoming request on Ghwebhook", $context);
+        $this->log(LogType::DEBUG, 'Incoming request on Ghwebhook', $context);
 
         return $next($request);
     }

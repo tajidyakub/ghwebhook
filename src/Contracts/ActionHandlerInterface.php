@@ -1,4 +1,5 @@
 <?php
+
 namespace Tj\Ghwebhook\Contracts;
 
 use Illuminate\Http\Request;

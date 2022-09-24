@@ -36,15 +36,15 @@ return [
             // Disabled by default.
             'enabled' => false,
             // This action class executes `git pull` shell command on your `base_path()` of laravel application, assuming that the repository config is valid.
-            'action' => \Tj\Ghwebhook\PullUpdatesAction::class
+            'action' => \Tj\Ghwebhook\PullUpdatesAction::class,
         ],
         [
             'enabled' => false,
-            'action' => \Tj\Ghwebhook\Actions\UpdatePackagesAction::class
+            'action' => \Tj\Ghwebhook\Actions\UpdatePackagesAction::class,
         ],
         [
             // Add more action by implementing 'Tj\GhWebhook\ActionInterface' where it should has a handle method to execute its task.
-        ]
+        ],
     ],
 
     'events' => [
@@ -62,5 +62,5 @@ return [
 
         // Dispatched events will send all its public properties into the channel statet here if enabled.
         'broadcast_channel' => 'webhook-events',
-    ]
+    ],
 ];

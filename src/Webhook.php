@@ -1,4 +1,5 @@
 <?php
+
 namespace Tj\Ghwebhook;
 
 use Illuminate\Http\Request;
@@ -39,6 +40,7 @@ class Webhook
     {
         $req_body = $this->payload->request->getContent();
         $signature = 'sha256='.hash_hmac('sha256', $req_body, $this->payload->config['secret']);
+
         return hash_equals($signature, $req_signature);
     }
 }

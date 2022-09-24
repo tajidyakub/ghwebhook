@@ -16,6 +16,10 @@ $ php artisan vendor:publish --provider="Tj\Ghwebhook\PackageServiceProvider" --
 
 ## Features
 
-Implemented and planned features are as follow
+Implemented and planned features are as follow 
 
-- [x] Logs on Incoming requests, actions completed and exception occured, `channel` name to write these logs on can be defined through the config file.
+- [x] Logs on Incoming requests, actions completed and exception occured, `channel` name to write these logs on can be defined through the config fi dle.
+
+## License
+
+`tj\ghwebhook` is an opensourced software licensed under [MIT License](https://choosealicense.com/licenses/mit/)
