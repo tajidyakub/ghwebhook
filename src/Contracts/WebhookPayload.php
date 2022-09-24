@@ -20,11 +20,12 @@ class WebhookPayload
     {
         $actions = [];
         foreach ($this->config['actions'] as $action) {
-            if ($action['enabled']) {
-                $actions[] = $action['action'];
+            if (isset($action['enabled'])) {
+                if ($action['enabled']) {
+                    $actions[] = $action['action'];
+                }
             }
         }
-
         return $actions;
     }
 

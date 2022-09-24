@@ -1,6 +1,6 @@
 <?php
 
-namespace Tj\Ghwebhook;
+namespace Tj\Ghwebhook\Concerns;
 
 trait Initializeable
 {

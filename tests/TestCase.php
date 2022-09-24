@@ -1,6 +1,7 @@
 <?php
 namespace Tj\Ghwebhook\Tests;
 
+use Illuminate\Support\Facades\Log;
 use Orchestra\Testbench\TestCase as BaseTest;
 
 class TestCase extends BaseTest
@@ -13,7 +14,8 @@ class TestCase extends BaseTest
     protected function getPackageProviders($app)
     {
         return [
-            \Tj\Ghwebhook\PackageServiceProvider::class
+            \Tj\Ghwebhook\PackageServiceProvider::class,
+            \Spatie\LaravelRay\RayServiceProvider::class,
         ];
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tj\Ghwebhook;
+namespace Tj\Ghwebhook\Contracts;
 
 enum LogType: string
 {

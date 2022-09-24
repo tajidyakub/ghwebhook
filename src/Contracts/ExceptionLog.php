@@ -4,7 +4,7 @@ namespace Tj\Ghwebhook\Contracts;
 
 use Tj\Ghwebhook\Concerns\InteractsWithArray;
 use Tj\Ghwebhook\Concerns\InteractsWithLog;
-use Tj\Ghwebhook\LogType;
+use Tj\Ghwebhook\Contracts\LogType;
 
 class ExceptionLog
 {

@@ -2,7 +2,7 @@
 
 return [
     // Relative path to serve webhook for incoming Github requests.
-    'path' => 'gh-webhook/',
+    'path' => 'gh-webhook',
 
     // Route's name for the webhook
     'route' => 'gh.webhook',

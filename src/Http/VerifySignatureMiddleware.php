@@ -14,12 +14,13 @@ class VerifySignatureMiddleware
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next, \Tj\Ghwebhook\Webhook $webhook)
+    public function handle(Request $request, Closure $next)
     {
         $verified = false;
         $req_signature = $request->header('X-Hub-Signature-256', false);
 
         if ($req_signature) {
+            $webhook = app()->make(\Tj\Ghwebhook\Webhook::class);
             $verified = $webhook->verifySignature($req_signature);
         }
 

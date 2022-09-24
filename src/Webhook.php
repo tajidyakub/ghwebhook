@@ -5,6 +5,7 @@ namespace Tj\Ghwebhook;
 use Illuminate\Http\Request;
 use Tj\Ghwebhook\Concerns\InteractsWithLog;
 use Tj\Ghwebhook\Contracts\ActionLog;
+use Tj\Ghwebhook\Contracts\LogType;
 use Tj\Ghwebhook\Contracts\WebhookPayload;
 
 class Webhook

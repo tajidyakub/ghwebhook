@@ -2,7 +2,7 @@
 
 namespace Tj\Ghwebhook\Contracts;
 
-use Tj\Ghwebhook\LogType;
+use Tj\Ghwebhook\Contracts\LogType;
 
 abstract class ActionHandler
 {

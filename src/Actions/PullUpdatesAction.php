@@ -6,7 +6,7 @@ use Symfony\Component\Process\Process;
 use Tj\Ghwebhook\Contracts\ActionExecutes;
 use Tj\Ghwebhook\Contracts\ActionHandlerInterface;
 use Tj\Ghwebhook\Contracts\ActionLog;
-use Tj\Ghwebhook\LogType;
+use Tj\Ghwebhook\Contracts\LogType;
 
 class PullUpdatesAction extends ActionExecutes implements ActionHandlerInterface
 {

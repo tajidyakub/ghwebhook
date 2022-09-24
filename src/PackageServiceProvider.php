@@ -2,7 +2,6 @@
 
 namespace Tj\Ghwebhook;
 
-use Illuminate\Http\Request;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
@@ -12,8 +11,11 @@ class PackageServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'ghwebhook');
 
+        if (!config('ghwebhook.enabled')) {
+            return 1;
+        }
         $this->app->singleton(\Tj\Ghwebhook\Webhook::class, function ($app) {
-            $app->make(\Tj\Ghwebhook\Webhook::class, ['request' => request()]);
+            return new \Tj\Ghwebhook\Webhook(request());
         });
     }
 
